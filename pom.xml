@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.javawebapp</groupId>
+  <artifactId>javawebapp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>javawebapp</name>
+  <properties>
+    <sonar.host.url>http://192.168.19.140:9000/</sonar.host.url>
+	<sonar.login>fee0c80a4506412fa2517ef7fa609a50026373fe</sonar.login>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+	<repository>
+		<id>nexus</id>
+		<name>walmart release</name>
+		<url>http://192.168.19.139:8081/repository/wallmart-releases/</url>
+	</repository>
+	<snapshotRepository>
+		<id>nexus</id>
+		<name>walmart snapshot</name>
+		<url>http://192.168.19.139:8081/repository/wallmart-snapshots/</url>
+	</snapshotRepository>
+  </distributionManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.0.2</version>
+        <configuration>
+          <source>1.4</source>
+          <target>1.4</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
