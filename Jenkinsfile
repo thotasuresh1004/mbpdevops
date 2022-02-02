@@ -16,11 +16,11 @@ pipeline {
 		timeout(time: 60, unit: 'MINUTES')
 	}
 	stages {
-		stage ('Checkoutcode'){
+		/*stage ('Checkoutcode'){
 			steps {
 				git credentialsId: 'githubuser', url: 'https://github.com/sureshdevops99/javawebapp.git'
 			}
-		}
+		}*/
 		stage ('Build') {
 			steps {
 				//withMaven(maven: 'Maven3.8.4') {
